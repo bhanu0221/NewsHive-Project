@@ -1,3 +1,29 @@
+.logo {
+    float: right;
+    width: 100px;
+    border-radius: 48%;
+
+}
+.left section {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    background-color: transparent;
+    padding: 6px 12px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    border: none;
+    
+}
+
+.nav-button:hover {
+    background-color: #716d6d7e;
+}
+
+
 body {  
   background: url("/project/static/social.jpg") no-repeat center center fixed;
   background-size: cover;

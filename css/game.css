@@ -1,19 +1,9 @@
-body {
-    background: url("/project/static/game.webp") no-repeat center center fixed;
-    background-size: cover;
-    
-}
-h1{
-    color: white; text-align: center;
-}
-
 .logo {
     float: right;
     width: 100px;
     border-radius: 48%;
 
 }
-
 .left section {
     display: flex;
     gap: 10px;
@@ -24,13 +14,24 @@ h1{
     padding: 6px 12px;
     font-size: 24px;
     cursor: pointer;
-    color: rgb(239, 236, 236);
+    color: black;
     border: none;
-
+    
 }
 
 .nav-button:hover {
-    background-color: #e5cece7e;
+    background-color: #716d6d7e;
+}
+
+
+
+body {
+    background: url("/project/static/game.webp") no-repeat center center fixed;
+    background-size: cover;
+    
+}
+h1{
+    color: white; text-align: center;
 }
 
 .game-container {

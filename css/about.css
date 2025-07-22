@@ -1,46 +1,69 @@
+.logo {
+    float: right;
+    width: 100px;
+    border-radius: 48%;
 
-    body {
-        background: url("/project/static/hero.avif") no-repeat center center fixed;
-        background-size: cover;
-        backdrop-filter: blur(3px);
+}
+.left section {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    background-color: transparent;
+    padding: 6px 12px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    border: none;
+    
+}
+
+.nav-button:hover {
+    background-color: #716d6d7e;
+}
+body {
+    background: url("/project/static/hero.avif") no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(3px);
 
 
-    }
+}
 
-    .header {
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        color: white;
-        text-align: center;
-        font-style: italic;
-    }
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
 
-    .about-text {
-        text-align: center;
-        font-size: large;
-        color:black;
-    }
+.about-text {
+    text-align: center;
+    font-size: large;
+    color: black;
+}
 
-    .personal {
-        padding-left: 16%;
-        text-align: left;
-    }
+.personal {
+    padding-left: 16%;
+    text-align: left;
+}
 
-    footer {
-        padding-top: 5%;
-        text-align: center;
-        color: black;
-    }
+footer {
+    padding-top: 5%;
+    text-align: center;
+    color: black;
+}
 
-    img {
-        width: 15%;
-        object-fit: cover;
-        margin: 0 auto 15px auto;
-        border-radius: 6px;
-        cursor: pointer;
-        /* Zoom effect */
-    }
+img {
+    width: 15%;
+    object-fit: cover;
+    margin: 0 auto 15px auto;
+    border-radius: 6px;
+    cursor: pointer;
+    /* Zoom effect */
+}
 
-    img:hover {
-        transform: scale(1.1);
-    }
+img:hover {
+    transform: scale(1.1);
+}

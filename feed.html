@@ -1,43 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>feedback</title>
-    <link rel="stylesheet" href="layout/style.css" />
 
-     <style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>feedback</title>
+  <style>
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
       background: #bfcfd3;
       text-align: center;
     }
+
     iframe {
       width: 100%;
       max-width: 700px;
       height: 900px;
       border: none;
     }
+
+    .logo {
+      float: right;
+      width: 100px;
+      border-radius: 48%;
+
+    }
+
+    .left section {
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-button {
+      background-color: transparent;
+      padding: 6px 12px;
+      font-size: 24px;
+      cursor: pointer;
+      color: black;
+      border: none;
+
+    }
+
+    .nav-button:hover {
+      background-color: #716d6d7e;
+    }
   </style>
-    
+
 </head>
+
 <body>
-    <img src="static/logo.jpg" alt="logo image" class="logo"/>
+  <img src="static/logo.jpg" alt="logo image" class="logo" />
 
-    <div>
-        <div class="left-section">
-            <button class="nav-button" onclick="location.href='index.html'">Home</button>
-            <button class="nav-button" onclick="location.href='about.html'">About</button>
-            <button class="nav-button" onclick="location.href='feed.html'">Feedback</button>
-        </div>
+  <div>
+    <div class="left-section">
+      <button class="nav-button" onclick="location.href='index.html'">Home</button>
+      <button class="nav-button" onclick="location.href='about.html'">About</button>
+      <button class="nav-button" onclick="location.href='feed.html'">Feedback</button>
     </div>
+  </div>
 
-    <div class="frame">
-  <h2>Need your Feedback!</h2>
+  <div class="frame">
+    <h2>Need your Feedback!</h2>
 
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScrgCI7flAU8EH65PPvvprZo1W_ke8Q0h45nIORhL-3naEsVA/viewform?usp=dialog"></iframe>
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLScrgCI7flAU8EH65PPvvprZo1W_ke8Q0h45nIORhL-3naEsVA/viewform?usp=dialog"></iframe>
   </div>
 
 </body>
+
 </html>
