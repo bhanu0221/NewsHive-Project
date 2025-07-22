@@ -23,7 +23,7 @@
     background-color: #716d6d7e;
 }
 body {
-    background: url("/project/static/hero.avif") no-repeat center center fixed;
+    background: url("../static/hero.avif") no-repeat center center fixed;
     background-size: cover;
     backdrop-filter: blur(3px);
 

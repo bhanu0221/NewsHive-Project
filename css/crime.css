@@ -25,7 +25,7 @@
 
 
 body {
-  background: url("/project/static/cri.avif") no-repeat center center fixed;
+  background: url("../static/cri.avif") no-repeat center center fixed;
   background-size: cover;
 }
 .news-container {
