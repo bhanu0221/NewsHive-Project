@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crypto Tracker</title>
+  <link rel="stylesheet" href="css file/style.css" />
+  <link rel="stylesheet" href="css file/crypto.css"/>
+  
+</head>
+<body>
+  <img src="static/logo.jpg" alt="logo image" class="logo"/>
+  <div>
+    <div class="left-section">
+      <button class="nav-button" onclick="location.href='index.html'">Home</button>
+      <button class="nav-button" onclick="location.href='about.html'">About</button>
+      <button class="nav-button" onclick="location.href='feed.html'">Feedback</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Crypto Prices</h1>
+    <table id="crypto-table">
+      <thead>
+        <tr>
+          <th>Coin</th>
+          <th>Current Price</th>
+          <th>24h Change</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="3" class="loading">Loading prices...</td></tr>
+      </tbody>
+    </table>
+
+    <h1>Latest Crypto News</h1>
+    <div id="newsContainer" class="news-container">
+      <div class="loading">Loading news...</div>
+    </div>
+  </div>
+
+  <script>
+  // showes crypto pricess 
+      async function loadCryptoPrices() {
+        const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,dogecoin";
+        const tbody = document.querySelector("#crypto-table tbody");
+        try {
+          const res = await fetch(url);
+          const data = await res.json();
+          tbody.innerHTML = "";
+
+          data.forEach(coin => {
+            const row = `
+              <tr>
+                <td><img src="${coin.image}" alt="${coin.name}" width="20"/> ${coin.name}</td>
+                <td>$${coin.current_price.toLocaleString()}</td>
+                <td style="color:${coin.price_change_percentage_24h >= 0 ? 'green' : 'red'}">
+                  ${coin.price_change_percentage_24h.toFixed(2)}%
+                </td>
+              </tr>`;
+            tbody.innerHTML += row;
+          });
+        } catch (err) {
+          tbody.innerHTML = "<tr><td colspan='3'>Error loading crypto prices.</td></tr>";
+        }
+      }
+
+      // show crypto news
+          async function loadCryptoNews() {
+      const apiKey = '595770c8af944dc1a7bf5bf9ddc3b4c5';
+      const timestamp = new Date().getTime(); // Add timestamp to avoid caching
+      const apiUrl = `https://newsapi.org/v2/everything?q=cryptocurrency&language=en&pageSize=5&sortBy=publishedAt&apiKey=${apiKey}&_=${timestamp}`;
+      const container = document.getElementById('newsContainer');
+
+      try {
+        const res = await fetch(apiUrl);
+        const data = await res.json();
+        container.innerHTML = "";
+
+        if (!data.articles || data.articles.length === 0) {
+          container.innerHTML = "<div>No news available.</div>";
+          return;
+        }
+
+        data.articles.forEach(article => {
+          const articleEl = document.createElement('div');
+          articleEl.className = 'news-article';
+          articleEl.innerHTML = `
+            <h2>${article.title}</h2>
+            <p><strong>Source:</strong> ${article.source.name}</p>
+            ${article.urlToImage ? `<img src="${article.urlToImage}" alt="news image">` : ''}
+            <p>${article.description || ''}</p>
+            <a href="${article.url}" target="_blank">Read more</a>
+          `;
+          container.appendChild(articleEl);
+        });
+      } catch (error) {
+        container.innerHTML = "<div class='loading'>Error fetching news.</div>";
+        console.error('News Fetch Error:', error);
+      }
+    }
+
+      // Load on page load
+      window.onload = () => {
+        loadCryptoPrices();
+        loadCryptoNews();
+        setInterval(loadCryptoNews, 60000); // Refresh news every 30 seconds
+      };
+</script>
+</body>
+</html>

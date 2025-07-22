@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crime News in India</title>
+  
+  <link rel="stylesheet" href="css file/crime.css" />
+  <link rel="stylesheet" href="css file/style.css" />
+ 
+</head>
+<body>
+  <img src="static/logo.jpg" alt="logo image" class="logo"/>
+
+  <div class="left-section">
+    <button class="nav-button" onclick="location.href='index.html'">Home</button>
+    <button class="nav-button" onclick="location.href='about.html'">About</button>
+    <button class="nav-button" onclick="location.href='feed.html'">Feedback</button>
+  </div>
+
+  <div class="news-container" id="news"></div>
+
+  <script>
+    async function fetchCrimeNews() {
+      const apiKey = "pub_15ee6d959bf14df3bf0da025b862a070"; // Replace this with your working API key
+      const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=crime&country=in&language=en`;
+
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+        const container = document.getElementById("news");
+
+        if (!data.results || data.results.length === 0) {
+          container.innerHTML = "<p>No crime news found.</p>";
+          return;
+        }
+
+        data.results.forEach(news => {
+          const newsItem = document.createElement('div');
+          newsItem.className = 'news-item';
+
+          const image = news.image_url ? news.image_url : 'https://via.placeholder.com/200x120?text=No+Image';
+
+          newsItem.innerHTML = `
+            <img src="${image}" alt="News Image" />
+            <div>
+              <h3>${news.title}</h3>
+              <p>${news.description || 'No description available.'}</p>
+              <a href="${news.link}" target="_blank">Read more</a>
+            </div>
+          `;
+
+          container.appendChild(newsItem);
+        });
+      } catch (err) {
+        console.error("Error loading crime news:", err);
+        document.getElementById("news").innerHTML = "<p>Error fetching crime news. Try again later.</p>";
+      }
+    }
+
+    window.onload = fetchCrimeNews;
+  </script>
+
+</body>
+</html>

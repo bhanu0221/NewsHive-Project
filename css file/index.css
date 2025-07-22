@@ -1,0 +1,81 @@
+
+body{
+    background: url("/project/static/index.jpg") no-repeat center center fixed;
+    background-size: cover;
+   
+}
+
+.click {
+    background-color: transparent;
+    border-color: black;
+    font-size: 100%;
+    cursor: pointer;
+}
+.click:hover {
+    background-color: rgb(182, 193, 226);
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: #212020;
+    text-align: center;
+}
+.para {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: #212020;
+    text-align: center;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color:rgb(37, 36, 36)
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    background-color: transparent;
+    gap: px;
+
+}
+
+.second-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: transparent;
+    gap: 20px;
+}
+
+.box {
+    flex: 1;
+    padding: 20px;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+
+.box-image {
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;    
+
+}
+.box-image:hover {
+  filter:blur(1px);
+  transform: scale(1.1); /* Zoom effect */
+  
+}
+
+footer {
+    text-align: center;
+}
+
+    

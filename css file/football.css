@@ -1,0 +1,48 @@
+body {  
+  background: url("/project/static/social.jpg") no-repeat center center fixed;
+  background-size: cover;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+.news-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.news-container div {
+  background: #ffffff4d;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.news-container img {
+  width: 100%;
+  height: auto;
+}
+
+.news-container h2 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.news-container p {
+  font-size: 14px;
+  color: #555;
+}
+
+.news-container a {
+  color: blue;
+  text-decoration: none;
+}
+
+.news-container a:hover {
+  text-decoration: underline;
+}

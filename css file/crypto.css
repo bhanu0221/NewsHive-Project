@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(220, 229, 244);
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+#crypto-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+#crypto-table th,
+#crypto-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#crypto-table th {
+    background-color: #273c75;
+    color: white;
+}
+
+.news-container {
+    display: grid;
+    gap: 20px;
+}
+
+.news-article {
+    border: 1px solid #ccccccdf;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.393);
+}
+
+.news-article img {
+    width: 100%;
+    max-height: 300px;
+    min-height: 150px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: gray;
+}
