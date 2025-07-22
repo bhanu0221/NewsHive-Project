@@ -3,6 +3,9 @@ body {
     background-size: cover;
     
 }
+h1{
+    color: white; text-align: center;
+}
 
 .logo {
     float: right;
