@@ -5,7 +5,6 @@ A responsive and dynamic real-time news website built using **HTML**, **CSS**, a
 
 ## 🚀 Live Demo
 👉 [Visit the Website](https://bhanu0221.github.io/NewsHive-Project/)  
-*(Replace the link with your actual Netlify URL)*
 
 ---
 
