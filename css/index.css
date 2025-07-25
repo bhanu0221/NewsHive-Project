@@ -132,7 +132,7 @@ footer {
 }
 
 /* Responsive for smaller screens */
- @media (max-width: 768px){
+@media screen and (max-width: 768px) {
     h1 {
         font-size: 2em;
     }
@@ -149,11 +149,18 @@ footer {
         align-items: center;
     }
 
-    .box {
+    .box-image {
         width: 90%;
+        object-fit: cover;
+        border-radius: 2%;
+        margin-bottom: 2%;
     }
 
     .para {
         font-size: 1em;
+    }
+    .box-image:hover {
+        filter: blur(1px);
+        transform: scale(1.1);
     }
 }
