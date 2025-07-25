@@ -131,36 +131,28 @@ footer {
     text-align: center;
 }
 
-/* Responsive for smaller screens */
 @media screen and (max-width: 768px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    .main-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    
-
+    .main-container,
     .second-container {
         flex-direction: column;
         align-items: center;
     }
 
-    .box-image {
-        width: 60%;
-        object-fit: cover;
-        border-radius: 2%;
-        margin-bottom: 2%;
+    .left-box,
+    .center-box,
+    .right-box {
+        width: 90%;
+        margin-bottom: 20px;
     }
 
-    .para {
-        font-size: 1em;
+    .box-image {
+        width: 100%;
+        height: auto;
     }
-    .box-image:hover {
-        filter: blur(1px);
-        transform: scale(1.1);
+
+    h1, .para, h2 {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 10px;
     }
 }
