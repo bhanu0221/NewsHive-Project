@@ -80,7 +80,6 @@ h2 {
 }
 
 .left-box {
-    flex: 1;
     padding: 20px;
     background-color: transparent;
     border: none;
@@ -90,7 +89,6 @@ h2 {
 }
 
 .center-box {
-    flex: 1;
     padding: 20px;
     background-color: transparent;
     border: none;
@@ -99,7 +97,6 @@ h2 {
     margin-bottom: 5%;
 }
 .right-box {
-    flex: 1;
     padding: 20px;
     background-color: transparent;
     border: none;
@@ -112,7 +109,7 @@ h2 {
 
 
 .box-image {
-    width: 450px;
+    width: 420px;
     height: 300px;
     object-fit: cover;
     border-radius: 5px;
