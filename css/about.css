@@ -31,11 +31,12 @@ body {
 }
 
 .header {
-    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
     font-weight: bold;
     color: rgb(2, 2, 2);
     text-align: center;
     font-style: italic;
+    font-size:large;
 }
 
 .about-text {
@@ -66,4 +67,11 @@ img {
 
 img:hover {
     transform: scale(1.1);
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    img {
+        width: 50%;
+    }
 }
