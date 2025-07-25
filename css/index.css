@@ -66,7 +66,7 @@ h2 {
     align-items: flex-start;
     padding: 0px;
     background-color: transparent;
-    gap: px;
+    gap: 20px;
 
 }
 
@@ -74,7 +74,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px;
+    padding: 0px;
     background-color: transparent;
     gap: 20px;
 }
