@@ -4,6 +4,7 @@
     border-radius: 48%;
 
 }
+
 .left section {
     display: flex;
     gap: 10px;
@@ -16,7 +17,7 @@
     cursor: pointer;
     color: black;
     border: none;
-    
+
 }
 
 .nav-button:hover {
@@ -24,10 +25,10 @@
 }
 
 
-body{
+body {
     background: url("../static/index.jpg") no-repeat center center fixed;
     background-size: cover;
-   
+
 }
 
 .click {
@@ -36,6 +37,7 @@ body{
     font-size: 100%;
     cursor: pointer;
 }
+
 .click:hover {
     background-color: rgb(182, 193, 226);
 }
@@ -45,16 +47,17 @@ h1 {
     color: #212020;
     text-align: center;
 }
+
 .para {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     color: #212020;
     text-align: center;
 }
 
-h2{
+h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    color:rgb(37, 36, 36)
+    color: rgb(37, 36, 36)
 }
 
 .main-container {
@@ -67,7 +70,7 @@ h2{
 
 }
 
-.second-container{
+.second-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -90,17 +93,42 @@ h2{
     height: 300px;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
 
 }
+
 .box-image:hover {
-  filter:blur(1px);
-  transform: scale(1.1); /* Zoom effect */
-  
+    filter: blur(1px);
+    transform: scale(1.1);
+    /* Zoom effect */
+
 }
 
 footer {
     text-align: center;
 }
 
-    
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .second-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    .para {
+        font-size: 1em;
+    }
+}
