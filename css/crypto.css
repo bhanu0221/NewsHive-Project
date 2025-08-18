@@ -84,3 +84,9 @@ h1 {
     font-style: italic;
     color: gray;
 }
+
+@media (max-width: 480px) {
+  .logo {
+    width: 70px;
+  }
+}  

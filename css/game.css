@@ -62,3 +62,9 @@ h1{
 .loading {
     color: #ccc;
 }
+
+@media (max-width: 480px) {
+  .logo {
+    width: 70px;
+  }
+}  
