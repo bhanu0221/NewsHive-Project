@@ -1,5 +1,4 @@
-const API_KEY = 'pub_fb0352c908664cf5af5b2165315cfe94';
-const API_URL = `https://newsdata.io/api/1/latest?apikey=${API_KEY}&q=football%20news&language=en`;
+const API_URL = `https://newsdata.io/api/1/latest?apikey=pub_fb0352c908664cf5af5b2165315cfe94&q=football%20news&language=en`;
 
 async function loadFootballNews() {
     try {
