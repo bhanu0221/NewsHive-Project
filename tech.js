@@ -1,4 +1,4 @@
- const API_KEY = 'pub_15ee6d959bf14df3bf0da025b862a070'; // Replace with your actual API key
+ const API_KEY = 'pub_fb0352c908664cf5af5b2165315cfe94'; // Replace with your actual API key
 const url = `https://newsdata.io/api/1/news?apikey=${API_KEY}&category=technology&language=en`;
 
 async function loadTechNews() {

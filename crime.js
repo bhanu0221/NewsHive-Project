@@ -1,5 +1,5 @@
 async function fetchCrimeNews() {
-    const apiKey = "pub_15ee6d959bf14df3bf0da025b862a070"; // Replace this with your API key
+    const apiKey = "pub_fb0352c908664cf5af5b2165315cfe94"; // Replace this with your API key
     const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=crime&country=in&language=en`;
 
     try {

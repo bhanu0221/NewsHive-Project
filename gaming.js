@@ -1,5 +1,5 @@
 async function loadGamesNews() {
-    const apiKey = "pub_15ee6d959bf14df3bf0da025b862a070"; // Replace with your real key if needed
+    const apiKey = "pub_fb0352c908664cf5af5b2165315cfe94"; // Replace with your real key if needed
     const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=gaming&language=en&category=technology`;
 
     const container = document.getElementById('gamingContainer');
